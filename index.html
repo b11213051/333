@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雪茄</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #8d5034;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 50px;
+            text-align: center; 
+        }
+        footer {
+            background-color: #8d5034;
+            color: #fff;
+            text-align: center;
+            padding: 5px;
+            position: fixed;
+            bottom: -50px;
+            width: 100%;
+            transition: bottom 0.3s; 
+        }
+        .collapsible {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+        .active, .collapsible:hover {
+            background-color: #ccc;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            text-align: left;
+        }
+
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            padding-top: 60px; 
+        }
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            text-align: center; 
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>雪茄介紹</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">關於雪茄</a></li>
+                <li><a href="#cigars">雪茄種類</a></li>
+                <li><a href="#choose">如何選擇雪茄</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>關於雪茄</h2>
+        <p>雪茄是一種由乾燥的煙草葉捲製而成的煙製品。<br>
+        它們源於中南美洲的印第安人文化，現已成為世界各地愛好者喜愛的奢華享受。<br>
+        根據考古學的考證，瑪雅文明的出土容器的表面顯示一男子吸食原始的雪茄的繪圖，<br>
+        證明公元10世紀，加勒比海和中美洲的原住民已經擁有吸食雪茄的技術。<br>
+        雖然吸菸是美洲土著的習慣，但普遍認為雪茄是由熱那亞冒險家哥倫布引入歐洲。</p>
+        <button type="button" class="collapsible">茄芯</button>
+        <div class="content">
+            <p>茄芯是雪茄的核心部分，由多片煙草葉捲成，決定了雪茄的主要味道和強度。質量好的雪茄茄芯應該燃燒均勻，味道豐富。</p>
+        </div>
+        <button type="button" class="collapsible">茄衣</button>
+        <div class="content">
+            <p>茄衣是包裹茄芯的外層煙草葉，通常質地細膩，顏色均勻，對雪茄的外觀和口感有很大影響。茄衣的顏色和質感會影響抽吸時的口感。</p>
+        </div>
+        <button type="button" class="collapsible">茄套</button>
+        <div class="content">
+            <p>茄套是包裹在茄衣外面的薄層煙草葉，主要起到保護作用，並輔助調節燃燒速度和整體口感。好的茄套應該細緻光滑，無明顯瑕疵。</p>
+        </div>
+        <img src="https://th.bing.com/th/id/R.658f5dcc31331df90530c82fd15c2fee?rik=fjg%2bmO439DrXyw&riu=http%3a%2f%2fimg.mp.itc.cn%2fupload%2f20160703%2f886bee594431446aaf27f73b4c195f07_th.jpg&ehk=64vkXyP%2fiI3KrI88mPPMjf5YcX5Q0xr13tSBtytGBN4%3d&risl=&pid=ImgRaw&r=0" alt="雪茄" width="500">
+    </section>
+
+    <section id="cigars">
+        <h2>雪茄種類</h2>
+        <p>雪茄有許多不同的種類，包括古巴、尼加拉瓜、多明尼加等。每一種雪茄都有其獨特的口味和風格。</p>
+        <img src="https://pic2.zhimg.com/v2-0faf82c68986290736503a9c69d1c34b_720w.jpg?source=172ae18b" alt="雪茄種類" width="500">
+    </section>
+
+    <section id="choose">
+        <h2>如何選擇雪茄</h2>
+        <button type="button" class="collapsible">經驗水平</button>
+        <div class="content">
+            <p>初學者應該選擇口味較溫和的雪茄，而經驗豐富的吸煙者可以嘗試口味較濃烈的雪茄。</p>
+        </div>
+        <button type="button" class="collapsible">產地</button>
+        <div class="content">
+            <p>不同產地的雪茄有不同的特色，例如古巴雪茄以其豐富的味道而聞名，而多明尼加雪茄則以其柔和的口感著稱。</p>
+        </div>
+        <button type="button" class="collapsible">尺寸和形狀</button>
+        <div class="content">
+            <p>雪茄的尺寸和形狀會影響抽吸時間和味道的表現，大尺寸的雪茄通常味道更濃郁，抽吸時間更長。</p>
+        </div>
+        <button type="button" class="collapsible">價格</button>
+        <div class="content">
+            <p>價格通常與雪茄的質量相關，選擇適合自己預算的雪茄。</p>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>&copy;B11213051</p>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="https://th.bing.com/th/id/OIP.omGpgn02oNGitrh-liZdRAHaHk?rs=1&pid=ImgDetMain" alt="Popup Image" style="width:100%;">
+        </div>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+
+        window.addEventListener("scroll", function() {
+            var footer = document.getElementById("footer");
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                footer.style.bottom = "0";
+            } else {
+                footer.style.bottom = "-50px";
+            }
+        });
+
+
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+        
+        window.onload = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
